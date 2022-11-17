@@ -11,11 +11,8 @@ import SwiftUI
 struct SpotifanApp: App {
     var body: some Scene {
         WindowGroup {
-			NavigationStack {
-				HomeView()
-			}
-			
-//			TestView(vm:.init())
+//			MainView()
+            TestView(vm:.init())
         }
     }
 }

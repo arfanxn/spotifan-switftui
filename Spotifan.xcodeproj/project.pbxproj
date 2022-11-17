@@ -25,6 +25,13 @@
 		8B56240F291BDB7E00DE3777 /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B56240E291BDB7E00DE3777 /* GeometryGetter.swift */; };
 		8B56B632291821C2003D3CB0 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B56B631291821C2003D3CB0 /* KeychainManager.swift */; };
 		8B56B63529183076003D3CB0 /* SpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B56B63429183076003D3CB0 /* SpotifyAPI.swift */; };
+		8B5B666B29249669003ED93D /* SongCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B666A29249669003ED93D /* SongCarousel.swift */; };
+		8B5B666D2924DF09003ED93D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B666C2924DF09003ED93D /* MainView.swift */; };
+		8B5B66712924DF54003ED93D /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B66702924DF54003ED93D /* ExploreView.swift */; };
+		8B5B66732924DFB3003ED93D /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B66722924DFB3003ED93D /* LibraryView.swift */; };
+		8B5B66752924DFDE003ED93D /* ExploreNavbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B66742924DFDE003ED93D /* ExploreNavbar.swift */; };
+		8B5B66772924F2DB003ED93D /* SongCategoryGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B66762924F2DB003ED93D /* SongCategoryGrid.swift */; };
+		8B5B66792924F637003ED93D /* SongCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B66782924F637003ED93D /* SongCategory.swift */; };
 		8B638F2E29134F6600DD3E48 /* SongGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B638F2D29134F6600DD3E48 /* SongGrid.swift */; };
 		8B638F33291352CA00DD3E48 /* SongPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B638F32291352CA00DD3E48 /* SongPlaylist.swift */; };
 		8B638F35291352D300DD3E48 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B638F34291352D300DD3E48 /* Song.swift */; };
@@ -40,8 +47,6 @@
 		8B7E7601291787FB008599AD /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7E7600291787FB008599AD /* WebView.swift */; };
 		8B7E76042917AE4C008599AD /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8B7E76032917AE4C008599AD /* OAuthSwift */; };
 		8BF3F54E291B972D0098FD4A /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF3F54D291B972D0098FD4A /* UIScreen.swift */; };
-		8BF3F550291B9A050098FD4A /* RectanglePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF3F54F291B9A050098FD4A /* RectanglePreferenceKey.swift */; };
-		8BF3F552291B9AC10098FD4A /* ScreenSizePrefKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF3F551291B9AC10098FD4A /* ScreenSizePrefKey.swift */; };
 		8BF3F554291BB9560098FD4A /* GeometryProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF3F553291BB9560098FD4A /* GeometryProxy.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +89,13 @@
 		8B56240E291BDB7E00DE3777 /* GeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryGetter.swift; sourceTree = "<group>"; };
 		8B56B631291821C2003D3CB0 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		8B56B63429183076003D3CB0 /* SpotifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPI.swift; sourceTree = "<group>"; };
+		8B5B666A29249669003ED93D /* SongCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCarousel.swift; sourceTree = "<group>"; };
+		8B5B666C2924DF09003ED93D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8B5B66702924DF54003ED93D /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		8B5B66722924DFB3003ED93D /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		8B5B66742924DFDE003ED93D /* ExploreNavbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreNavbar.swift; sourceTree = "<group>"; };
+		8B5B66762924F2DB003ED93D /* SongCategoryGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCategoryGrid.swift; sourceTree = "<group>"; };
+		8B5B66782924F637003ED93D /* SongCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCategory.swift; sourceTree = "<group>"; };
 		8B638F2D29134F6600DD3E48 /* SongGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongGrid.swift; sourceTree = "<group>"; };
 		8B638F32291352CA00DD3E48 /* SongPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongPlaylist.swift; sourceTree = "<group>"; };
 		8B638F34291352D300DD3E48 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -98,8 +110,6 @@
 		8B7E7600291787FB008599AD /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		8B7E76052917B5C9008599AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8BF3F54D291B972D0098FD4A /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
-		8BF3F54F291B9A050098FD4A /* RectanglePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectanglePreferenceKey.swift; sourceTree = "<group>"; };
-		8BF3F551291B9AC10098FD4A /* ScreenSizePrefKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizePrefKey.swift; sourceTree = "<group>"; };
 		8BF3F553291BB9560098FD4A /* GeometryProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,9 +227,10 @@
 		8B1D1DD42910EBAE0070462B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8B1D1DD529110DC00070462B /* HomeView.swift */,
+				8B5B666E2924DF2A003ED93D /* Menus */,
 				8B7E75FB2916DDB2008599AD /* TestView.swift */,
 				8B7E7600291787FB008599AD /* WebView.swift */,
+				8B5B666C2924DF09003ED93D /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +271,7 @@
 			children = (
 				8B1D1DDF291114A30070462B /* Navbar.swift */,
 				8B688C27291CE7870082CD3C /* HomeNavbar.swift */,
+				8B5B66742924DFDE003ED93D /* ExploreNavbar.swift */,
 			);
 			path = Navbars;
 			sourceTree = "<group>";
@@ -284,8 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				8B1D1DED291130C80070462B /* ScrollOffsetPreferenceKey.swift */,
-				8BF3F54F291B9A050098FD4A /* RectanglePreferenceKey.swift */,
-				8BF3F551291B9AC10098FD4A /* ScreenSizePrefKey.swift */,
 			);
 			path = PreferenceKeys;
 			sourceTree = "<group>";
@@ -298,10 +308,22 @@
 			path = APIs;
 			sourceTree = "<group>";
 		};
+		8B5B666E2924DF2A003ED93D /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				8B1D1DD529110DC00070462B /* HomeView.swift */,
+				8B5B66702924DF54003ED93D /* ExploreView.swift */,
+				8B5B66722924DFB3003ED93D /* LibraryView.swift */,
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
 		8B638F2C29134F4200DD3E48 /* Song */ = {
 			isa = PBXGroup;
 			children = (
 				8B638F2D29134F6600DD3E48 /* SongGrid.swift */,
+				8B5B666A29249669003ED93D /* SongCarousel.swift */,
+				8B5B66762924F2DB003ED93D /* SongCategoryGrid.swift */,
 			);
 			path = Song;
 			sourceTree = "<group>";
@@ -311,6 +333,7 @@
 			children = (
 				8B638F32291352CA00DD3E48 /* SongPlaylist.swift */,
 				8B638F34291352D300DD3E48 /* Song.swift */,
+				8B5B66782924F637003ED93D /* SongCategory.swift */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -484,28 +507,33 @@
 				8B7E75FA2916DC67008599AD /* CombineStore.swift in Sources */,
 				8B7E75F42916D7B3008599AD /* SpotifyArtistAlbums.swift in Sources */,
 				8B56B63529183076003D3CB0 /* SpotifyAPI.swift in Sources */,
+				8B5B66712924DF54003ED93D /* ExploreView.swift in Sources */,
 				8B638F35291352D300DD3E48 /* Song.swift in Sources */,
 				8B1D1DEE291130C80070462B /* ScrollOffsetPreferenceKey.swift in Sources */,
+				8B5B66752924DFDE003ED93D /* ExploreNavbar.swift in Sources */,
 				8B56240D291BDB6E00DE3777 /* ViewFrame.swift in Sources */,
 				8B638F2E29134F6600DD3E48 /* SongGrid.swift in Sources */,
-				8BF3F552291B9AC10098FD4A /* ScreenSizePrefKey.swift in Sources */,
 				8B638F3B291388F500DD3E48 /* SpotifyAccessToken.swift in Sources */,
 				8B638F38291387D600DD3E48 /* SpotifyManager.swift in Sources */,
 				8B1D1DE0291114A30070462B /* Navbar.swift in Sources */,
 				8B03660729125A7F0003FDFA /* HomeMenu.swift in Sources */,
 				8B688C28291CE7870082CD3C /* HomeNavbar.swift in Sources */,
 				8BF3F554291BB9560098FD4A /* GeometryProxy.swift in Sources */,
-				8BF3F550291B9A050098FD4A /* RectanglePreferenceKey.swift in Sources */,
 				8B638F33291352CA00DD3E48 /* SongPlaylist.swift in Sources */,
 				8B1D1DB02910EB780070462B /* Spotifan.xcdatamodeld in Sources */,
 				8B1D1DE8291127E60070462B /* AppState.swift in Sources */,
+				8B5B666B29249669003ED93D /* SongCarousel.swift in Sources */,
+				8B5B66792924F637003ED93D /* SongCategory.swift in Sources */,
+				8B5B66732924DFB3003ED93D /* LibraryView.swift in Sources */,
 				8B1D1DD629110DC00070462B /* HomeView.swift in Sources */,
 				8BF3F54E291B972D0098FD4A /* UIScreen.swift in Sources */,
 				8B638F3D291389D900DD3E48 /* APIManager.swift in Sources */,
 				8B56B632291821C2003D3CB0 /* KeychainManager.swift in Sources */,
+				8B5B66772924F2DB003ED93D /* SongCategoryGrid.swift in Sources */,
 				8B638F422913913300DD3E48 /* HTTPMethodEnum.swift in Sources */,
 				8B1D1DA42910EB760070462B /* SpotifanApp.swift in Sources */,
 				8B1D1DF02911312E0070462B /* OffsetableScrollView.swift in Sources */,
+				8B5B666D2924DF09003ED93D /* MainView.swift in Sources */,
 				8B56240F291BDB7E00DE3777 /* GeometryGetter.swift in Sources */,
 				8B1D1DDA291110AF0070462B /* Color.swift in Sources */,
 				8B7E7601291787FB008599AD /* WebView.swift in Sources */,

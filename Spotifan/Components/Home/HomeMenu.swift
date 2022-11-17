@@ -15,10 +15,10 @@ struct HomeMenu: View {
 				Text("Hello World")
 			} label: {
 				Text("Music")
-					.foregroundColor(.UI.accent)
+					.foregroundColor(.UI.grey)
 					.padding(.vertical,5)
 					.padding(.horizontal)
-					.background(Color.UI.secondary)
+					.background(Color.UI.darkGrey)
 					.clipShape(Capsule())
 			}
 			
@@ -26,10 +26,10 @@ struct HomeMenu: View {
 				Text("Hello World")
 			} label: {
 				Text("Podcast")
-					.foregroundColor(.UI.accent)
+					.foregroundColor(.UI.grey)
 					.padding(.vertical,5)
 					.padding(.horizontal)
-					.background(Color.UI.secondary)
+					.background(Color.UI.darkGrey)
 					.clipShape(Capsule())
 			}
 			
