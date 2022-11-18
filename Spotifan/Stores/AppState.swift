@@ -9,5 +9,4 @@ import Foundation
 
 
 class AppState {
-	@Published var scrollViewContentOffset: CGFloat = .zero
 }
