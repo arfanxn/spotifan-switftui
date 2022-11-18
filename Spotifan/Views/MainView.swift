@@ -8,37 +8,92 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @State var selectedTab: TabMenuEnum = .home
+    
     var body: some View {
         NavigationStack {
             ZStack {
                 Color.clear.edgesIgnoringSafeArea(.all)
                 
-                TabView {
+                SwiftUI.TabView(selection: self.$selectedTab) {
                     HomeView()
-                        .tabItem {
-                            Text("Home")
-                            Image(systemName: "house")
-                        }
+                        .tag(TabMenuEnum.home)
                     ExploreView()
-                        .tabItem {
-                            Text("Search")
-                            Image(systemName: "magnifyingglass")
-                        }
+                        .tag(TabMenuEnum.explore)
                     LibraryView()
-                        .tabItem {
-                            Text("Your Library")
-                            Image(systemName: "rectangle.stack")
+                        .tag(TabMenuEnum.library)
+                }
+                
+                VStack{
+                    Spacer()
+                    
+                    LazyVGrid(columns: Array(repeating: .init(.flexible()), count: 3)) {
+                        Button {
+                            self.selectedTab = .home
+                        } label: {
+                            VStack(spacing: 8){
+                                Image(systemName: "house")
+                                    .font(.system(size: 24, weight: .semibold))
+                                Text("Home")
+                                    .font(.system(size: 12))
+                                    .fontWeight(.semibold)
+                            }
+                            .foregroundColor(
+                                self.selectedTab == .home ? .UI.white : .UI.grey
+                            )
                         }
+                        .frame(maxWidth: .infinity)
+                        
+                        Button {
+                            self.selectedTab = .explore
+                        } label: {
+                            VStack(spacing: 8){
+                                Image(systemName: "magnifyingglass")
+                                    .font(.system(size: 24, weight: .semibold))
+                                Text("Search")
+                                    .font(.system(size: 12))
+                                    .fontWeight(.semibold)
+                            }
+                            .foregroundColor(
+                                self.selectedTab == .explore ? .UI.white : .UI.grey
+                            )
+                        }
+                        .frame(maxWidth: .infinity)
+                        
+                        Button {
+                            self.selectedTab = .library
+                        } label: {
+                            VStack(spacing: 8){
+                                Image(systemName: "rectangle.stack")
+                                    .font(.system(size: 24, weight: .semibold))
+                                    .rotationEffect(Angle(degrees: 90))
+                                Text("Your Library")
+                                    .font(.system(size: 12))
+                                    .fontWeight(.semibold)
+                            }
+                            .foregroundColor(
+                                self.selectedTab == .library ? .UI.white : .UI.grey
+                            )
+                        }
+                        .frame(maxWidth: .infinity)
+                        
+                    }
+                    .padding(.all)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.UI.darkGrey)
+
                 }
                 
             }
         }
-
+        
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        //  MainView()
+        EmptyView()
     }
 }

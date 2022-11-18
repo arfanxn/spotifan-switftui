@@ -20,6 +20,7 @@
 		8B1D1DE0291114A30070462B /* NavbarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D1DDF291114A30070462B /* NavbarContainer.swift */; };
 		8B1D1DE8291127E60070462B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D1DE7291127E60070462B /* AppState.swift */; };
 		8B1D1DEE291130C80070462B /* ScrollOffsetPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D1DED291130C80070462B /* ScrollOffsetPreferenceKey.swift */; };
+		8B2C38A529279D7B0076D698 /* TabMenuEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C38A429279D7B0076D698 /* TabMenuEnum.swift */; };
 		8B56240D291BDB6E00DE3777 /* ViewFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B56240C291BDB6E00DE3777 /* ViewFrame.swift */; };
 		8B56240F291BDB7E00DE3777 /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B56240E291BDB7E00DE3777 /* GeometryGetter.swift */; };
 		8B56B632291821C2003D3CB0 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B56B631291821C2003D3CB0 /* KeychainManager.swift */; };
@@ -84,6 +85,7 @@
 		8B1D1DDF291114A30070462B /* NavbarContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarContainer.swift; sourceTree = "<group>"; };
 		8B1D1DE7291127E60070462B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = Spotifan/Stores/AppState.swift; sourceTree = SOURCE_ROOT; };
 		8B1D1DED291130C80070462B /* ScrollOffsetPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffsetPreferenceKey.swift; sourceTree = "<group>"; };
+		8B2C38A429279D7B0076D698 /* TabMenuEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuEnum.swift; sourceTree = "<group>"; };
 		8B56240C291BDB6E00DE3777 /* ViewFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFrame.swift; sourceTree = "<group>"; };
 		8B56240E291BDB7E00DE3777 /* GeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryGetter.swift; sourceTree = "<group>"; };
 		8B56B631291821C2003D3CB0 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				8B638F412913913300DD3E48 /* HTTPMethodEnum.swift */,
+				8B2C38A429279D7B0076D698 /* TabMenuEnum.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				8B03660729125A7F0003FDFA /* HomeMenu.swift in Sources */,
 				8B688C28291CE7870082CD3C /* HomeNavbar.swift in Sources */,
 				8BF3F554291BB9560098FD4A /* GeometryProxy.swift in Sources */,
+				8B2C38A529279D7B0076D698 /* TabMenuEnum.swift in Sources */,
 				8B638F33291352CA00DD3E48 /* SongPlaylist.swift in Sources */,
 				8B1D1DB02910EB780070462B /* Spotifan.xcdatamodeld in Sources */,
 				8B1D1DE8291127E60070462B /* AppState.swift in Sources */,
