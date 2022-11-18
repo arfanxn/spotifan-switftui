@@ -34,7 +34,7 @@ struct SongCarousel: View {
         VStack(alignment: .leading){
             Text(self.title).font(.title2.bold())
             
-            ScrollView(.horizontal ,showsIndicators: false) {
+            SwiftUI.ScrollView(.horizontal ,showsIndicators: false) {
                 HStack(spacing: 15){
                     ForEach(1..<10) { index in
                         VStack(alignment: .leading, spacing: 15){
