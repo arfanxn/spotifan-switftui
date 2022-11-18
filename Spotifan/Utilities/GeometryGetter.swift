@@ -35,15 +35,21 @@ struct GeometryGetter: View {
             // these statements are used to make more efficient app
             if let handler = self.handler {
                 Color.clear.task(id: rect) {
-                    handler(rect)
+                    DispatchQueue.main.async {
+                        handler(rect)
+                    }
                 }
             } else {
                 Color.clear.task(id: rect) {
                     if self.rect != nil {
-                        self.rect = rect
+                        DispatchQueue.main.async {
+                            self.rect = rect
+                        }
                     }
                     if self.size != nil {
-                        self.size = rect.size
+                        DispatchQueue.main.async {
+                            self.size = rect.size
+                        }
                     }
                 }
             } // end of ifelse
