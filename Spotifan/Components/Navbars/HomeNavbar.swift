@@ -9,95 +9,119 @@ import SwiftUI
 
 class HomeNavbarViewModel : ObservableObject {
     
-    @Published var showNavbar : Bool = true ;
-    
     public func getGreeting() -> String {
         let hour = Calendar.current.component(.hour, from: Date())
         
         switch hour {
-            case 7..<12:
-                return "Good Morning"
-            case 12..<16:
-                return "Good Afternoon"
-            case 16..<20:
-                return "Good Evening"
-            case 20..<24:
-                return "Good Night"
-            default:
-                // case 0..<7:
-                return "Spotifan"
+        case 7..<12:
+            return "Good Morning"
+        case 12..<16:
+            return "Good Afternoon"
+        case 16..<20:
+            return "Good Evening"
+        case 20..<24:
+            return "Good Night"
+        default:
+            // case 0..<7:
+            return "Spotifan"
         }
     }
     
 }
 
-struct HomeNavbar: View {
+struct HomeNavbar<Content: View>: View {
     
     @StateObject var vm : HomeNavbarViewModel = .init() ;
     
-    var content : AnyView
+    @State var headerSize : CGSize? = .zero;
+    @State var homeMenuSize : CGSize? = .zero;
+    @State var navbarSize : CGSize? = .zero;
+    @State var headerYOffset : CGFloat = .zero;
     
-    var body: some View {
-        Navbar(vm: .init(), self.navbar, content: self.content) { navbarRect, contentRect in
-                self.vm.showNavbar = (contentRect.minY < -50) ? false : true ;
-        }
+    let content: Content
+    
+    init(@ViewBuilder _ content: () -> Content) {
+        self.content = content()
     }
     
-    var navbar : AnyView {
-        .init(
-            VStack{
-                if (self.vm.showNavbar) {
-                    HStack{
-                        Text(self.vm.getGreeting())
-                            .font(.title.weight(.bold))
-                            .foregroundColor(.UI.white)
-                        
-                        Spacer()
-                        
-                        HStack(spacing: 10){
-                            
-                            NavigationLink {
-                                Text("Hello World")
-                            } label: {
-                                Image(systemName: "bell")
-                            }
-                            
-                            NavigationLink {
-                                Text("Hello World")
-                            } label: {
-                                Image(systemName: "clock")
-                            }
-                            
-                            NavigationLink {
-                                Text("Hello World")
-                            } label: {
-                                Image(systemName: "gearshape")
-                            }
-                            
-                        }
-                        .font(.title)
-                        .foregroundColor(.UI.white)
-                    }
-                }
-                HomeMenu()
+    var body: some View {
+        NavbarContainer{
+            NavbarTypealias{
+                self.navbar
             }
-                .padding(.vertical,10)
-                .padding(.horizontal)
-                .background(Color.black)
             
-        )
+            NavbarContentTypealias{
+                self.content
+            }
+        }
+        /* Disabled due to an error EXC_Break
+         .onPreferenceChange(ScrollOffsetPreferenceKey.self) { offset in
+             if let navbarHeight = self.navbarSize?.height , offset.y < -navbarHeight {
+                 self.headerYOffset = abs(abs(offset.y)) - 20 - (self.headerSize?.height ?? 0);
+             } else {
+                 self.headerYOffset = .zero;
+             }
+         }
+         */
+    }
+    
+    var navbar : some View {
+        VStack{
+            
+            HStack{
+                Text(self.vm.getGreeting())
+                    .font(.title.weight(.bold))
+                    .foregroundColor(.UI.white)
+                
+                Spacer()
+                
+                HStack(spacing: 10){
+                    
+                    NavigationLink {
+                        Text("Hello World")
+                    } label: {
+                        Image(systemName: "bell")
+                    }
+                    
+                    NavigationLink {
+                        Text("Hello World")
+                    } label: {
+                        Image(systemName: "clock")
+                    }
+                    
+                    NavigationLink {
+                        Text("Hello World")
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                    
+                }
+                .font(.title)
+                .foregroundColor(.UI.white)
+            }
+            .background(GeometryGetter(size: self.$headerSize))
+            
+            HomeMenu()
+                .background(GeometryGetter(size: self.$homeMenuSize))
+            
+        }
+        .padding(.vertical, 10)
+        .padding(.horizontal)
+        .background(Color.black)
+        .background(GeometryGetter(size: self.$navbarSize))
+        .offset(y : self.headerYOffset)
     }
     
 }
 
 struct HomeNavbar_Previews: PreviewProvider {
     static var previews: some View {
-        HomeNavbar(content: .init(
+        HomeNavbar {
             LazyVStack{
                 ForEach(0..<50, id: \.self) { index in
                     Text("Index \(index)")
                 }
             }
-        ))
+        }
     }
 }

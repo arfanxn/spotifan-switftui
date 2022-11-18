@@ -19,21 +19,21 @@ struct HomeView: View {
     ];
     
     var body: some View {
-        HomeNavbar(content: self.content)
+        HomeNavbar {
+            self.content
+        }
     }
     
-    var content : AnyView {
-        .init(
-            LazyVStack(spacing:20){
-                SongGrid(songs : self.songs)
-                
-                ForEach(1..<10) { index in
-                    SongCarousel(title: "Hello Title \(index)", style: .reguler)
-                }
-                
+    var content : some View {
+        LazyVStack(spacing:20){
+            SongGrid(songs : self.songs)
+            
+            ForEach(1..<10) { index in
+                SongCarousel(title: "Hello Title \(index)", style: .reguler)
             }
-                .padding(.horizontal)
-        )
+            
+        }
+        .padding(.horizontal)
     }
 }
 

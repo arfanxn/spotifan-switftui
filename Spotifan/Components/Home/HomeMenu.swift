@@ -36,6 +36,7 @@ struct HomeMenu: View {
 			Spacer()
 		}
 		.font(.caption)
+        .background(Color.UI.black)
 		
 	}
 }

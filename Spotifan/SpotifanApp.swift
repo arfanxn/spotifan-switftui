@@ -11,8 +11,8 @@ import SwiftUI
 struct SpotifanApp: App {
     var body: some Scene {
         WindowGroup {
-//			MainView()
-            TestView(vm:.init())
+			MainView()
+//            TestView(vm:.init())
         }
     }
 }
