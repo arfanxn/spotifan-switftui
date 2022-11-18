@@ -7,40 +7,48 @@
 
 import SwiftUI
 
-struct GeometryRectGetter: View {
-	@Binding var rect: CGRect
-    var frameIn : CoordinateSpace
-	
-    init(rect: Binding<CGRect>,frameIn : CoordinateSpace = .global) {
-		self._rect = rect
-        self.frameIn = frameIn
-	}
-	
-	var body: some View {
-		GeometryReader { geometry in
-			Color.clear.onAppear{
-                self.rect = geometry.frame(in: self.frameIn)
-				}
-		}
-	}
-}
-
-struct GeometrySizeGetter: View {
-    @Binding var size: CGSize
-    var frameIn : CoordinateSpace
+struct GeometryGetter: View {
     
-    init(size: Binding<CGSize>,frameIn : CoordinateSpace = .global) {
+    typealias Handler = (_ rect : CGRect) -> Void ;
+    
+    let frameIn : CoordinateSpace
+    @Binding var rect: CGRect?
+    @Binding var size: CGSize?
+    var handler : Handler? ;
+    
+    init(
+        frameIn : CoordinateSpace = .global,
+        rect: Binding<CGRect?> = .constant(nil),
+        size: Binding<CGSize?> = .constant(nil),
+        handler : Handler? = nil
+    ) {
+        self._rect = rect
         self._size = size
         self.frameIn = frameIn
+        self.handler = handler
     }
     
     var body: some View {
         GeometryReader { geometry in
-            Color.clear.onAppear{
-                self.size = geometry.frame(in: self.frameIn).size
-            }
+            let rect = geometry.frame(in: self.frameIn)
+            
+            // these statements are used to make more efficient app
+            if let handler = self.handler {
+                Color.clear.task(id: rect) {
+                    handler(rect)
+                }
+            } else {
+                Color.clear.task(id: rect) {
+                    if self.rect != nil {
+                        self.rect = rect
+                    }
+                    if self.size != nil {
+                        self.size = rect.size
+                    }
+                }
+            } // end of ifelse
+
         }
     }
 }
-
 
