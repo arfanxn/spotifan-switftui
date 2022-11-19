@@ -12,30 +12,31 @@ struct HomeMenu: View {
 		HStack(alignment: .center , spacing: 10) {
 			
 			NavigationLink {
-				Text("Hello World")
+				Text("Musics")
 			} label: {
-				Text("Music")
-					.foregroundColor(.UI.grey)
-					.padding(.vertical,5)
-					.padding(.horizontal)
-					.background(Color.UI.darkGrey)
-					.clipShape(Capsule())
+                Text("Musics")
+                    .foregroundColor(.UI.white)
+                    .padding(.vertical,8)
+                    .padding(.horizontal)
+                    .background(Color.UI.darkGrey)
+                    .clipShape(Capsule())
 			}
 			
 			NavigationLink {
-				Text("Hello World")
+				Text("Podcasts")
 			} label: {
-				Text("Podcast")
-					.foregroundColor(.UI.grey)
-					.padding(.vertical,5)
-					.padding(.horizontal)
-					.background(Color.UI.darkGrey)
-					.clipShape(Capsule())
+                Text("Podcasts")
+                    .foregroundColor(.UI.white)
+                    .padding(.vertical,8)
+                    .padding(.horizontal)
+                    .background(Color.UI.darkGrey)
+                    .clipShape(Capsule())
 			}
 			
 			Spacer()
 		}
-		.font(.caption)
+        .font(.caption)
+        .fontWeight(.semibold)
         .background(Color.UI.black)
 		
 	}

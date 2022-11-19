@@ -33,7 +33,7 @@ struct MainView: View {
                             self.selectedTab = .home
                         } label: {
                             VStack(spacing: 8){
-                                Image(systemName: "house")
+                                Image(systemName: self.selectedTab == .home ? "house.fill" : "house")
                                     .font(.system(size: 24, weight: .semibold))
                                 Text("Home")
                                     .font(.system(size: 12))
@@ -49,7 +49,7 @@ struct MainView: View {
                             self.selectedTab = .explore
                         } label: {
                             VStack(spacing: 8){
-                                Image(systemName: "magnifyingglass")
+                                Image(systemName: self.selectedTab == .explore ? "sparkle.magnifyingglass" : "magnifyingglass")
                                     .font(.system(size: 24, weight: .semibold))
                                 Text("Search")
                                     .font(.system(size: 12))
@@ -65,7 +65,7 @@ struct MainView: View {
                             self.selectedTab = .library
                         } label: {
                             VStack(spacing: 8){
-                                Image(systemName: "rectangle.stack")
+                                Image(systemName: self.selectedTab == .library ? "rectangle.stack.fill" : "rectangle.stack")
                                     .font(.system(size: 24, weight: .semibold))
                                     .rotationEffect(Angle(degrees: 90))
                                 Text("Your Library")

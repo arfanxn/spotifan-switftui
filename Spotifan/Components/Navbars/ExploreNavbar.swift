@@ -32,7 +32,7 @@ struct ExploreNavbar: View {
     var navbar : some View {
         VStack(alignment: .leading){
             Text("Search")
-                .font(.title2.bold())
+                .font(.title.bold())
                 .padding(.vertical,20)
             
             NavigationLink {
