@@ -36,7 +36,7 @@ struct HomeNavbar<Content: View>: View {
     @State var headerSize : CGSize? = .zero;
     @State var homeMenuSize : CGSize? = .zero;
     @State var navbarSize : CGSize? = .zero;
-    @State var headerYOffset : CGFloat = .zero;
+    @State var navbarYOffset : CGFloat = .zero;
     
     let content: Content
     
@@ -55,15 +55,15 @@ struct HomeNavbar<Content: View>: View {
             }
         }
         .background(Color.UI.black)
-        /* Disabled due to an error EXC_Break
-         .onPreferenceChange(ScrollOffsetPreferenceKey.self) { offset in
-             if let navbarHeight = self.navbarSize?.height , offset.y < -navbarHeight {
-                 self.headerYOffset = abs(abs(offset.y)) - 20 - (self.headerSize?.height ?? 0);
-             } else {
-                 self.headerYOffset = .zero;
-             }
-         }
-         */
+        .onPreferenceChange(ScrollOffsetPreferenceKey.self) { offset in
+            if let navbarHeight = self.navbarSize?.height , offset.y < -navbarHeight {
+                self.navbarYOffset = abs(offset.y) -
+                    ((self.navbarSize?.height ?? 0) - (self.headerSize?.height ?? 0));
+            } else {
+                self.navbarYOffset = .zero;
+            }
+        }
+        
     }
     
     var navbar : some View {
@@ -111,7 +111,7 @@ struct HomeNavbar<Content: View>: View {
         .padding(.horizontal)
         .background(Color.UI.black)
         .background(GeometryGetter(size: self.$navbarSize))
-        .offset(y : self.headerYOffset)
+        .offset(y : self.navbarYOffset)
     }
     
 }
