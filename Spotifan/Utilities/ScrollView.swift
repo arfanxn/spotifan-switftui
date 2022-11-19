@@ -36,7 +36,11 @@ struct ScrollView<Content: View>: View {
                content
            }
            .coordinateSpace(name: "scrollView")
-           .onPreferenceChange(ScrollOffsetPreferenceKey.self, perform: offsetChanged)
+           .onPreferenceChange(ScrollOffsetPreferenceKey.self, perform: { offset in
+               DispatchQueue.main.async {
+                   offsetChanged(offset)
+               }
+           })
        }
 }
 
