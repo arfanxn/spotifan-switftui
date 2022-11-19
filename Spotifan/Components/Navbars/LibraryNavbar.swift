@@ -109,7 +109,7 @@ struct LibraryNavbar<Content: View>: View {
         }
         .font(.caption)
         .fontWeight(.semibold)
-        .padding(.vertical)
+        .padding(.vertical, 2)
         .padding(.horizontal)
         .frame(maxWidth: .infinity)
         .background(Color.UI.black)
