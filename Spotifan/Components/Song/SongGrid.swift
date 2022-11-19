@@ -24,8 +24,9 @@ struct SongGrid: View {
 							.clipped()
 						
 						Text("\(song.title)")
-							.font(.caption.bold())
-							.foregroundColor(.UI.grey)
+							.font(.caption)
+                            .fontWeight(.semibold)
+							.foregroundColor(.UI.white)
 					}
 				}
 				.frame(height: 50)
