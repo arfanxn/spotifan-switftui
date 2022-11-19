@@ -22,6 +22,7 @@
 		8B1D1DEE291130C80070462B /* ScrollOffsetPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D1DED291130C80070462B /* ScrollOffsetPreferenceKey.swift */; };
 		8B2C38A529279D7B0076D698 /* TabMenuEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C38A429279D7B0076D698 /* TabMenuEnum.swift */; };
 		8B2C38A72927BCB50076D698 /* LibraryNavbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C38A62927BCB50076D698 /* LibraryNavbar.swift */; };
+		8B40FF5B2928DEB200D922FB /* LibraryListOrGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B40FF5A2928DEB200D922FB /* LibraryListOrGrid.swift */; };
 		8B56240D291BDB6E00DE3777 /* ViewFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B56240C291BDB6E00DE3777 /* ViewFrame.swift */; };
 		8B56240F291BDB7E00DE3777 /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B56240E291BDB7E00DE3777 /* GeometryGetter.swift */; };
 		8B56B632291821C2003D3CB0 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B56B631291821C2003D3CB0 /* KeychainManager.swift */; };
@@ -88,6 +89,7 @@
 		8B1D1DED291130C80070462B /* ScrollOffsetPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffsetPreferenceKey.swift; sourceTree = "<group>"; };
 		8B2C38A429279D7B0076D698 /* TabMenuEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuEnum.swift; sourceTree = "<group>"; };
 		8B2C38A62927BCB50076D698 /* LibraryNavbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryNavbar.swift; sourceTree = "<group>"; };
+		8B40FF5A2928DEB200D922FB /* LibraryListOrGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryListOrGrid.swift; sourceTree = "<group>"; };
 		8B56240C291BDB6E00DE3777 /* ViewFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFrame.swift; sourceTree = "<group>"; };
 		8B56240E291BDB7E00DE3777 /* GeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryGetter.swift; sourceTree = "<group>"; };
 		8B56B631291821C2003D3CB0 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 		8B1D1DDB2911131B0070462B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8B40FF5C2929308500D922FB /* Library */,
 				8B638F2C29134F4200DD3E48 /* Song */,
 				8B03660929125A940003FDFA /* Home */,
 				8B1D1DDE291114590070462B /* Navbars */,
@@ -303,6 +306,14 @@
 				8B1D1DED291130C80070462B /* ScrollOffsetPreferenceKey.swift */,
 			);
 			path = PreferenceKeys;
+			sourceTree = "<group>";
+		};
+		8B40FF5C2929308500D922FB /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				8B40FF5A2928DEB200D922FB /* LibraryListOrGrid.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		8B56B63329183066003D3CB0 /* APIs */ = {
@@ -540,6 +551,7 @@
 				8B56B632291821C2003D3CB0 /* KeychainManager.swift in Sources */,
 				8B5B66772924F2DB003ED93D /* SongCategoryGrid.swift in Sources */,
 				8B638F422913913300DD3E48 /* HTTPMethodEnum.swift in Sources */,
+				8B40FF5B2928DEB200D922FB /* LibraryListOrGrid.swift in Sources */,
 				8B1D1DA42910EB760070462B /* SpotifanApp.swift in Sources */,
 				8B5B666D2924DF09003ED93D /* MainView.swift in Sources */,
 				8B56240F291BDB7E00DE3777 /* GeometryGetter.swift in Sources */,
