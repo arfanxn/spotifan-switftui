@@ -66,6 +66,7 @@ struct ExploreView: View {
             ])
         })
         .padding(.horizontal)
+        .background(Color.UI.black)
     )}
 }
 

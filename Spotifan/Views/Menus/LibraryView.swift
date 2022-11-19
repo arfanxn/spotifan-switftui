@@ -68,7 +68,7 @@ struct LibraryView: View {
             )
         }
         .padding(.horizontal)
-        .background(Color.UI.darkestGrey)
+        .background(Color.UI.black)
     }
     
 }

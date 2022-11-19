@@ -28,12 +28,13 @@ struct HomeView: View {
         LazyVStack(spacing:20){
             SongGrid(songs : self.songs)
             
-            ForEach(1..<10) { index in
-                SongCarousel(title: "Hello Title \(index)", style: .reguler)
+            ForEach(1..<10) { index in 
+                SongCarousel(title: "Song \(index)", style: .reguler)
             }
             
         }
         .padding(.horizontal)
+        .background(Color.UI.black)
     }
 }
 

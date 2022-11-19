@@ -25,6 +25,7 @@ struct LibraryNavbar<Content: View>: View {
                 self.content
             }
         }
+        .background(Color.UI.black)
     }
     
     var fixedNavbar : some View {
@@ -54,10 +55,11 @@ struct LibraryNavbar<Content: View>: View {
             
         }
         .font(.title)
+        .foregroundColor(.UI.white)
         .padding(.vertical,16)
         .padding(.horizontal)
         .frame(maxWidth: .infinity)
-        .foregroundColor(.UI.white)
+        .background(Color.UI.black)
     }
     
     var scrollableNavbar : some View {

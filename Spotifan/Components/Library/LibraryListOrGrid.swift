@@ -29,7 +29,7 @@ struct LibraryListOrGrid: View {
             }
         }
         .frame(maxWidth: .infinity)
-        .background(Color.UI.darkestGrey)
+        .background(Color.UI.black)
     }
     
     var itemsListStyle : some View {

@@ -27,12 +27,14 @@ struct ExploreNavbar: View {
                 self.content
             }
         }
+        .background(Color.UI.black)
     }
     
     var navbar : some View {
         VStack(alignment: .leading){
             Text("Search")
                 .font(.title.bold())
+                .foregroundColor(.UI.white)
                 .padding(.vertical,20)
             
             NavigationLink {

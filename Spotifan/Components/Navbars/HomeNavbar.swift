@@ -54,6 +54,7 @@ struct HomeNavbar<Content: View>: View {
                 self.content
             }
         }
+        .background(Color.UI.black)
         /* Disabled due to an error EXC_Break
          .onPreferenceChange(ScrollOffsetPreferenceKey.self) { offset in
              if let navbarHeight = self.navbarSize?.height , offset.y < -navbarHeight {
@@ -74,6 +75,7 @@ struct HomeNavbar<Content: View>: View {
                     .foregroundColor(.UI.white)
                 
                 Spacer()
+                    .background(Color.UI.black)
                 
                 HStack(spacing: 10){
                     
@@ -107,7 +109,7 @@ struct HomeNavbar<Content: View>: View {
         }
         .padding(.vertical, 10)
         .padding(.horizontal)
-        .background(Color.black)
+        .background(Color.UI.black)
         .background(GeometryGetter(size: self.$navbarSize))
         .offset(y : self.headerYOffset)
     }
@@ -120,6 +122,8 @@ struct HomeNavbar_Previews: PreviewProvider {
             LazyVStack{
                 ForEach(0..<50, id: \.self) { index in
                     Text("Index \(index)")
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
                 }
             }
         }
