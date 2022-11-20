@@ -10,12 +10,12 @@ import SwiftUI
 struct HomeView: View {
     
     let songs = [
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
+        Song(title: "Song Titile", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Titile", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Titile", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Titile", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Titile", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Titile", album: "Song Album", thumbnail_string_url: nil),
     ];
     
     var body: some View {
@@ -28,8 +28,11 @@ struct HomeView: View {
         LazyVStack(spacing:20){
             SongGrid(songs : self.songs)
             
-            ForEach(1..<10) { index in 
-                SongCarousel(title: "Song \(index)", style: .reguler)
+            ForEach(1..<3) { index in
+                SongCarousel(title: "Song Carousel Title \(index)", style: .reguler, songs: self.songs)
+                SongCarousel(title: "Song Carousel Title \(index)", style: .small, songs: self.songs)
+                SongCarousel(title: "Song Carousel Title \(index)", style: .smallRounded, songs: self.songs)
+                SongCarousel(title: "Song Carousel Title \(index)", style: .regulerRounded, songs: self.songs)
             }
             
         }

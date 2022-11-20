@@ -14,7 +14,8 @@ struct SongCarousel: View {
     }
     
     let title : String;
-    let style : SongCarousel.Style ;
+    let style : SongCarousel.Style;
+    @State var songs : [Song] = [] ;
     
     var imageSize : CGSize {
         let style = self.style ;
@@ -36,7 +37,7 @@ struct SongCarousel: View {
             
             SwiftUI.ScrollView(.horizontal ,showsIndicators: false) {
                 HStack(spacing: 15){
-                    ForEach(1..<10) { index in
+                    ForEach(self.songs) { song in
                         VStack(alignment: .leading, spacing: 15){
                             GeometryReader { geo in
                                 Image("image_test")
@@ -55,7 +56,7 @@ struct SongCarousel: View {
                                     )
                             }
                             .frame(width: self.imageSize.width, height: self.imageSize.height)
-                            Text("Hello song")
+                            Text(song.title)
                                 .font(.caption)
                                 .fontWeight(.semibold)
                                 .foregroundColor(.UI.grey)
@@ -70,6 +71,7 @@ struct SongCarousel: View {
 
 struct SongCarousel_Previews: PreviewProvider {
     static var previews: some View {
-        SongCarousel(title: "Favorites", style: .reguler)
+        EmptyView()
+//        SongCarousel(title: "Favorites", style: .reguler)
     }
 }

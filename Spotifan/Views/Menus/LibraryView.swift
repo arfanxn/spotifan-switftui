@@ -14,15 +14,25 @@ struct LibraryView: View {
     }
     
     let songs = [
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
-        Song(title: "Hello", album: "World", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
+        Song(title: "Song Title", album: "Song Album", thumbnail_string_url: nil),
     ];
     
     var body: some View {

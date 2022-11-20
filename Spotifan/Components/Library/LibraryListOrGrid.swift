@@ -75,7 +75,7 @@ struct LibraryListOrGrid: View {
                         .fontWeight(.semibold)
                         .foregroundColor(.UI.white)
                     
-                    Text("Hello description")
+                    Text("Song Description")
                         .font(.caption)
                         .fontWeight(.semibold)
                         .foregroundColor(.UI.grey)
